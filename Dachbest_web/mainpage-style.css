@@ -1,0 +1,382 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  color: white;
+  background-color: rgb(252, 27, 27);
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.back-to-top:hover {
+  color: white;
+  background-color: rgb(252, 27, 27);
+}
+
+.back-to-top.active {
+  bottom: 35px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.nav-bar-menu ul {
+  margin: 0 auto 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 37.5rem;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-bar-menu li {
+  display: table-cell;
+  position: relative;
+}
+
+.nav-bar-menu a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 1rem 1.3rem;
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-bar-menu a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background-color: rgb(252, 27, 27);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-bar-menu a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#none-underline-nav a:after {
+  background: white;
+}
+
+.nav-bar-menu a:hover {
+  color: black;
+}
+
+@media screen and (max-height: 300px) {
+  .nav-bar-menu ul {
+    margin-top: 40px;
+  }
+}
+
+#logoBrand {
+  width: 10rem;
+  height: 8rem;
+}
+
+#leftNav {
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+#rightNav {
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+.brand-background-blur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  height: 85vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(img/henry-co-aJJEZ98RnpQ-unsplash.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.brand-background-content h1 {
+  color: white;
+  margin-bottom: 3rem;
+  display: table;
+  font-family: "Montserrat", sans-serif;
+  font-size: 7rem;
+  font-weight: bold;
+  filter: none;
+  letter-spacing: 0.2em;
+}
+
+#bolder_text_CB {
+  font-weight: 600;
+}
+
+.brand-background-content h2 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.down-arrow {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.bounce-bounce {
+  margin-top: 4.5rem;
+  margin-right: 0;
+  font-size: 3rem;
+  color: white;
+  float: left;
+  width: 100%;
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  55%,
+  75%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-20px);
+  }
+  65% {
+    transform: translateY(-10px);
+  }
+  85% {
+    transform: translateY(-5px);
+  }
+}
+
+/* BRAND INFORMATIONS */
+
+.brand-information h2 {
+  margin-top: 5rem;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+}
+
+.brand-information hr {
+  text-align: center;
+  width: 8%;
+  margin: 0 auto;
+  border: 1px solid rgb(252, 27, 27);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 1;
+}
+
+.brand-information p {
+  display: block;
+  font-size: 1.4rem;
+  margin: 0 30% 0 30%;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  text-align: center;
+  text-align: inherit;
+  font-weight: 400;
+}
+
+/* MAIN GRID CARDS */
+
+.grid-main-cards h2 {
+  margin-top: 5rem;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+}
+
+.grid.grid-main-cards {
+  margin: 0 auto;
+}
+
+.grid-main-cards hr {
+  text-align: center;
+  width: 8%;
+  margin: 0 auto;
+  border: 1px solid rgb(252, 27, 27);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 1;
+}
+
+.grid-main-container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 4rem;
+}
+
+.grid-main-container article {
+  display: block;
+  margin-top: 3rem;
+  background-color: white;
+  border: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0.2, 0.7);
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+  height: 38rem;
+  width: 25rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.grid-main-container article:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.grid-main-container button:hover {
+  color: black;
+  background-color: rgb(252, 27, 27);
+}
+
+.grid-main-container article img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.text p {
+  padding: 1.2rem;
+}
+
+.text button {
+  background: rgb(252, 27, 27);
+  color: white;
+  margin-bottom: 8px;
+  padding: 8px;
+  width: 20%;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.podtext {
+  color: rgb(252, 27, 27);
+}
+
+/* FOOTER */
+
+.footer-red {
+  margin-top: 7rem;
+  color: white;
+  background-color: rgb(252, 27, 27);
+  height: 15vh;
+}
+
+.grid-footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 15vh;
+}
+
+.grid-footer-content a {
+  text-decoration: none;
+  color: white;
+}
+
+.item-grid-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-grid-footer h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.item-grid-footer p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.footer-black {
+  color: white;
+  background-color: rgb(34, 34, 34);
+  height: 10vh;
+}
+
+.item-2-4 {
+  height: 10vh;
+  font-weight: 550;
+}
+
+.underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 1200px)
+{
+  .grid-main-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

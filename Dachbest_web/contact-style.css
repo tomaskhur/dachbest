@@ -1,0 +1,376 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* BACKTOTOP */
+
+.back-to-top {
+  color: white;
+  scroll-behavior: smooth;
+  background-color: rgb(252, 27, 27);
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.back-to-top:hover {
+  color: white;
+  background-color: rgb(252, 27, 27);
+}
+
+.back-to-top.active {
+  bottom: 35px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* NAVBAR */
+
+.nav-bar-menu ul {
+  margin: 0 auto 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 37.5rem;
+  text-align: center;
+}
+
+.nav-bar-menu li {
+  display: table-cell;
+  position: relative;
+}
+
+.nav-bar-menu a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 1rem 1.3rem;
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-bar-menu a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background-color: rgb(252, 27, 27);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-bar-menu a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#none-underline-nav a:after {
+  background: white;
+}
+
+.nav-bar-menu a:hover {
+  color: black;
+}
+
+@media screen and (max-height: 300px) {
+  .nav-bar-menu ul {
+    margin-top: 40px;
+  }
+}
+
+#logoBrand {
+  width: 10rem;
+  height: 8rem;
+}
+
+#leftNav {
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+#rightNav {
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+/* MAIN */
+
+.background-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  height: 40vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(img/roof_repairing.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.background-photo h1 {
+  color: white;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+/* CONTACTFORM */
+
+.contact-form {
+  max-width: 700px;
+  width: 100%;
+  padding: 1.5rem 1.8rem;
+  box-shadow: 3px 4px 6px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.contact-form .form-title {
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.contact-form .form-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 80px;
+  border-radius: 5px;
+  background: rgb(255, 110, 110);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 110, 110, 1) 19%,
+    rgba(255, 40, 40, 1) 44%,
+    rgba(255, 30, 30, 1) 78%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+.contact-form form .user-information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1.2rem 0 0.7rem 0;
+}
+
+form .user-information .input-box {
+  margin-bottom: 1rem;
+  width: calc(100% / 2 - 20px);
+}
+
+.user-information .input-box label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.user-information .input-box input {
+  height: 2.8rem;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 1rem;
+  font-size: 1rem;
+  border-bottom-width: 2px;
+  transition: 0 all 0.3 ease;
+}
+
+.user-information .input-box input:focus,
+.user-information .input-box input:valid {
+  border-color: rgb(252, 27, 27);
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  background: red;
+  padding: 0.7rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+  outline-color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.input-textarea textarea {
+  max-width: 650px;
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  border-bottom-width: 2px;
+  margin-bottom: 0.3rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  transition: 0 all 0.3 ease;
+  resize: none;
+}
+
+textarea::placeholder {
+  height: 2.8rem;
+}
+
+.input-textarea label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.user-information .input-textarea textarea:focus,
+.user-information .input-textarea textarea:valid {
+  border-color: 1px solid rgb(252, 27, 27);
+}
+
+@media (max-width: 584px) {
+  .contact-form {
+    max-width: 100%;
+  }
+
+  form .user-information .input-box {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .contact-form form .user-information {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-information ::-webkit-scrollbar {
+    width: 0;
+  }
+  .input-textarea textarea {
+    max-width: 100%;
+  }
+}
+
+/* FOOTER */
+
+.footer-red {
+  margin-top: 7rem;
+  color: white;
+  background-color: rgb(252, 27, 27);
+  height: 15vh;
+}
+
+.footer-black {
+  color: white;
+  background-color: rgb(34, 34, 34);
+  height: 10vh;
+}
+
+.grid-footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 100%;
+}
+
+.grid-footer-content a {
+  text-decoration: none;
+  color: white;
+}
+
+.item-grid-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-grid-footer h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.item-grid-footer p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.item-2-4 {
+  height: 100%;
+  font-weight: 550;
+}
+
+.underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+  .footer-red {
+    height: 18vh;
+  }
+  .footer-black {
+    color: white;
+    background-color: rgb(34, 34, 34);
+    height: 16vh;
+  }
+  .grid-footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+  .item-grid-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .back-to-top {
+    display: none;
+  }
+}
