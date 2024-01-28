@@ -3,3 +3,4 @@
 3 - dodělat kontaktní formulář
 4 - responsivity
 5 - opravit javascript button to top
+6 - vercel management
